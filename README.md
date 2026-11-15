@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting?style=social" alt="GitHub stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting?style=social" alt="GitHub_Stars" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" alt="License: CC0-1.0" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -57,9 +57,9 @@ The table below lists leading commercial enterprise cloud and VPS hosting provid
 
 ## 🛠️ Open-Source Cloud Infrastructure & Hosting Projects
 
-Curated self-hosted cloud platforms, virtualization management engines, lightweight IaaS stacks, and container PaaS tools. Sorted in descending order by **GitHub Stars**.
+Curated self-hosted cloud platforms, virtualization management engines, lightweight IaaS stacks, and container PaaS tools. Sorted in descending order by **GitHub_Stars**.
 
-| Project | Stars | Category | Description |
+| Project | GitHub_Stars | Category | Description |
 |---------|:-----:|----------|-------------|
 | **[Kubernetes](https://github.com/kubernetes/kubernetes)** | [![Stars](https://img.shields.io/github/stars/kubernetes/kubernetes?style=social&color=white)](https://github.com/kubernetes/kubernetes/stargazers) | Container Orchestration | Production-grade container scheduling and workload management system. The de facto standard runtime foundation for modern cloud-native infrastructure across public, hybrid, and private clouds. |
 | **[Coolify](https://github.com/coollabsio/coolify)** | [![Stars](https://img.shields.io/github/stars/coollabsio/coolify?style=social&color=white)](https://github.com/coollabsio/coolify/stargazers) | Self-Hosted PaaS | An open-source, self-hosted alternative to Heroku, Vercel, and Netlify. Effortlessly deploys web apps, databases, and Docker workloads onto any Linux VPS with automatic SSL, Git push triggers, and zero lock-in. |
@@ -134,7 +134,7 @@ Contributions, project suggestions, and pricing updates are welcome!
 
 1. 🍴 Fork this repository.
 2. 🌿 Create a new branch: `git checkout -b feature/add-new-platform`.
-3. 📝 Add your tool with official website link, accurate pricing / GitHub star badge, and clear description.
+3. 📝 Add your tool with official website link, accurate pricing / GitHub Stars_Badge, and clear description.
 4. 🚀 Open a Pull Request with a short summary of the addition.
 
 ---
