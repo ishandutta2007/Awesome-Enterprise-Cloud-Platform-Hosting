@@ -1,6 +1,6 @@
 # Awesome-Enterprise-Cloud-Platform-Hosting
 
-# Top Enterprise Cloud Platform & Hosting Ecosystem
+## Top Enterprise Cloud Platform & Hosting Ecosystem
 
 **Curated List of SaaS Platforms & Open-Source GitHub Projects**  
 *Focused on Hyperscale IaaS, Budget VPS & Self-Hosted Cloud Platforms*  
