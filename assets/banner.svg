@@ -1,0 +1,245 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b19" />
+      <stop offset="45%" stop-color="#0b132b" />
+      <stop offset="100%" stop-color="#1c2541" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#4facfe" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="accentPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b176fc" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#e0c3fc" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#334155" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Filters for Glow -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3" />
+    </pattern>
+
+    <style>
+      .glow-orb-1 {
+        animation: floatOrb1 10s ease-in-out infinite alternate;
+      }
+      .glow-orb-2 {
+        animation: floatOrb2 8s ease-in-out infinite alternate;
+      }
+      .wave-pulse-1 {
+        animation: pulseWave1 6s ease-in-out infinite;
+      }
+      .wave-pulse-2 {
+        animation: pulseWave2 8s ease-in-out infinite;
+      }
+      .data-packet {
+        animation: movePacket 4s linear infinite;
+      }
+      .data-packet-rev {
+        animation: movePacketRev 5s linear infinite;
+      }
+      .pill-float {
+        animation: floatPill 5s ease-in-out infinite alternate;
+      }
+      .node-pulse {
+        animation: nodeBlink 3s ease-in-out infinite alternate;
+      }
+
+      @keyframes floatOrb1 {
+        0% { transform: translate(0px, 0px) scale(1); }
+        50% { transform: translate(50px, -25px) scale(1.15); }
+        100% { transform: translate(-30px, 20px) scale(0.95); }
+      }
+
+      @keyframes floatOrb2 {
+        0% { transform: translate(0px, 0px) scale(1); }
+        50% { transform: translate(-40px, 30px) scale(1.1); }
+        100% { transform: translate(30px, -20px) scale(0.9); }
+      }
+
+      @keyframes pulseWave1 {
+        0% { opacity: 0.25; stroke-dashoffset: 0; }
+        50% { opacity: 0.75; stroke-dashoffset: 40; }
+        100% { opacity: 0.25; stroke-dashoffset: 80; }
+      }
+
+      @keyframes pulseWave2 {
+        0% { opacity: 0.4; }
+        50% { opacity: 0.85; }
+        100% { opacity: 0.4; }
+      }
+
+      @keyframes movePacket {
+        0% { offset-distance: 0%; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { offset-distance: 100%; opacity: 0; }
+      }
+
+      @keyframes floatPill {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-6px); }
+      }
+
+      @keyframes nodeBlink {
+        0% { r: 4px; opacity: 0.5; }
+        50% { r: 6.5px; opacity: 1; }
+        100% { r: 4px; opacity: 0.5; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" fill="url(#bgGrad)" />
+
+  <!-- Technical Grid Pattern -->
+  <rect width="1200" height="420" fill="url(#grid)" />
+
+  <!-- Dynamic Background Glowing Orbs -->
+  <g class="glow-orb-1" opacity="0.4">
+    <circle cx="200" cy="90" r="140" fill="url(#accentCyan)" filter="url(#glowCyan)" />
+  </g>
+  <g class="glow-orb-2" opacity="0.35">
+    <circle cx="1020" cy="310" r="160" fill="url(#accentPurple)" filter="url(#glowPurple)" />
+  </g>
+
+  <!-- Dynamic Network Topologies (Background) -->
+  <g stroke-linecap="round">
+    <!-- Curved Connection 1 -->
+    <path id="track1" d="M -50,330 C 250,220 380,390 620,290 C 850,200 980,340 1250,260"
+          fill="none" stroke="url(#lineGrad1)" stroke-width="2.5" stroke-dasharray="8 6" class="wave-pulse-1" />
+    
+    <!-- Curved Connection 2 -->
+    <path id="track2" d="M -50,110 C 260,180 440,70 700,140 C 950,210 1060,90 1250,150" 
+          fill="none" stroke="url(#lineGrad1)" stroke-width="1.8" stroke-dasharray="4 6" opacity="0.45" />
+
+    <!-- Pulse nodes on track 1 -->
+    <circle cx="250" cy="275" r="4.5" fill="#38bdf8" class="node-pulse" />
+    <circle cx="620" cy="290" r="5.5" fill="#818cf8" class="node-pulse" style="animation-delay: 1s;" />
+    <circle cx="950" cy="265" r="5" fill="#c084fc" class="node-pulse" style="animation-delay: 2s;" />
+  </g>
+
+  <!-- Cloud Infrastructure Server Graphic Elements (Geometric Abstract) -->
+  <g opacity="0.25" stroke="#38bdf8" stroke-width="1.2" fill="none">
+    <!-- Server Stack Left -->
+    <rect x="70" y="270" width="110" height="26" rx="4" />
+    <line x1="85" y1="283" x2="110" y2="283" />
+    <circle cx="160" cy="283" r="2.5" fill="#38bdf8" />
+
+    <rect x="70" y="304" width="110" height="26" rx="4" />
+    <line x1="85" y1="317" x2="110" y2="317" />
+    <circle cx="160" cy="317" r="2.5" fill="#38bdf8" />
+
+    <rect x="70" y="338" width="110" height="26" rx="4" />
+    <line x1="85" y1="351" x2="110" y2="351" />
+    <circle cx="160" cy="351" r="2.5" fill="#38bdf8" />
+
+    <!-- Server Stack Right -->
+    <rect x="1020" y="70" width="110" height="26" rx="4" />
+    <line x1="1035" y1="83" x2="1060" y2="83" />
+    <circle cx="1110" cy="83" r="2.5" fill="#818cf8" />
+
+    <rect x="1020" y="104" width="110" height="26" rx="4" />
+    <line x1="1035" y1="117" x2="1060" y2="117" />
+    <circle cx="1110" cy="117" r="2.5" fill="#818cf8" />
+  </g>
+
+  <!-- Center Foreground Content Container (Guaranteed Foreground Clarity) -->
+  <g id="foreground-content">
+    <!-- Badges / Category Indicator Top -->
+    <g transform="translate(600, 75)" text-anchor="middle">
+      <rect x="-190" y="-18" width="380" height="34" rx="17" fill="url(#pillGrad)" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.2" />
+      <circle cx="-160" cy="-1" r="4" fill="#38bdf8">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="5" y="4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#93c5fd" letter-spacing="2.5">
+        ENTERPRISE INFRASTRUCTURE &amp; HOSTING
+      </text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="155" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="800" fill="url(#textGrad)" letter-spacing="-0.5">
+      Awesome Enterprise Cloud Platform
+    </text>
+
+    <!-- Subtitle -->
+    <text x="600" y="200" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#cbd5e1" letter-spacing="0.3">
+      Hyperscale IaaS • High-Performance VPS • Private Cloud &amp; Self-Hosted Stacks
+    </text>
+
+    <!-- Divider Line -->
+    <path d="M 450,225 L 750,225" stroke="url(#lineGrad1)" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Feature Tags / Ecosystem Pills (Floating subtly) -->
+    <g transform="translate(600, 275)" text-anchor="middle" class="pill-float">
+      <!-- Pill 1: Hyperscale Clouds -->
+      <g transform="translate(-340, 0)">
+        <rect x="-80" y="-18" width="160" height="36" rx="18" fill="url(#pillGrad)" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.2" />
+        <text x="0" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#f8fafc">☁️ Public IaaS</text>
+      </g>
+
+      <!-- Pill 2: Developer VPS -->
+      <g transform="translate(-170, 0)">
+        <rect x="-75" y="-18" width="150" height="36" rx="18" fill="url(#pillGrad)" stroke="#818cf8" stroke-opacity="0.5" stroke-width="1.2" />
+        <text x="0" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#f8fafc">🚀 Budget VPS</text>
+      </g>
+
+      <!-- Pill 3: OpenStack & IaaS -->
+      <g transform="translate(0, 0)">
+        <rect x="-75" y="-18" width="150" height="36" rx="18" fill="url(#pillGrad)" stroke="#c084fc" stroke-opacity="0.5" stroke-width="1.2" />
+        <text x="0" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#f8fafc">🏢 Private Cloud</text>
+      </g>
+
+      <!-- Pill 4: Virtualization & HCI -->
+      <g transform="translate(170, 0)">
+        <rect x="-80" y="-18" width="160" height="36" rx="18" fill="url(#pillGrad)" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.2" />
+        <text x="0" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#f8fafc">⚡ Virtualization</text>
+      </g>
+
+      <!-- Pill 5: Self-Hosted PaaS -->
+      <g transform="translate(340, 0)">
+        <rect x="-75" y="-18" width="150" height="36" rx="18" fill="url(#pillGrad)" stroke="#818cf8" stroke-opacity="0.5" stroke-width="1.2" />
+        <text x="0" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#f8fafc">🛠️ Modern PaaS</text>
+      </g>
+    </g>
+
+    <!-- Bottom Meta Line -->
+    <text x="600" y="355" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="500" fill="#94a3b8">
+      AWS • Azure • GCP • Hetzner • DigitalOcean • OpenStack • Proxmox • Kubernetes • Coolify
+    </text>
+  </g>
+
+  <!-- Subtle Border Frame -->
+  <rect x="0.5" y="0.5" width="1199" height="419" rx="8" fill="none" stroke="#334155" stroke-width="1" stroke-opacity="0.5" />
+</svg>

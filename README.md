@@ -1,33 +1,43 @@
-# Awesome Enterprise Cloud Platform & Hosting [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Enterprise Cloud Platform & Hosting ☁️🚀
 
-> A curated list of top enterprise cloud platforms, IaaS providers, VPS hosting solutions, self-hosted private cloud infrastructure, and open-source cloud orchestration tools.
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Enterprise Cloud Platform and Hosting Banner" width="100%" />
+</p>
 
-[![GitHub stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting?style=social)](https://github.com/ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting/stargazers)
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting/pulls)
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting?style=social" alt="GitHub stars" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" alt="License: CC0-1.0" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
+
+> 🌐 **A curated list of top enterprise cloud platforms, IaaS providers, VPS hosting solutions, self-hosted private cloud infrastructure, and open-source cloud orchestration tools.**
 
 This repository tracks industry-leading **SaaS & Hyperscale Cloud Platforms** alongside battle-tested **Open-Source GitHub Projects** for enterprise compute, virtualization, container orchestration, and cloud infrastructure hosting. Whether you need hyperscale public clouds, cost-effective developer VPS hosting, or full control with private on-premises IaaS, this guide provides comparative pricing, market valuation, and GitHub popularity metrics.
 
 ---
 
-## Table of Contents
+## 📑 Table of Contents
 
-- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
-- [Enterprise Cloud & Hosting SaaS Platforms](#enterprise-cloud--hosting-saas-platforms)
-- [Open-Source Cloud Infrastructure & Hosting Projects](#open-source-cloud-infrastructure--hosting-projects)
-- [Architecture & Platform Selection Guide](#architecture--platform-selection-guide)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🏢 Enterprise Cloud & Hosting SaaS Platforms](#-enterprise-cloud--hosting-saas-platforms)
+- [🛠️ Open-Source Cloud Infrastructure & Hosting Projects](#️-open-source-cloud-infrastructure--hosting-projects)
+- [🏗️ Architecture & Platform Selection Guide](#️-architecture--platform-selection-guide)
+- [⭐ Star History](#star-history)
+- [💖 Support](#-support)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚠️ Disclaimer](#️-disclaimer)
 
 ---
 
-## Sector Overview & Market Dynamics
+## 📊 Sector Overview & Market Dynamics
 
 The global enterprise cloud computing and IaaS market is valued at approximately **$670+ billion in 2026** and projected to exceed **$1.2 trillion by 2030** (CAGR ~18–20%). The sector is **highly concentrated (oligopolistic / winner-take-most)** at the hyperscale foundation tier, with the "Big Three"—Amazon Web Services (~31%), Microsoft Azure (~24%), and Google Cloud Platform (~11%)—controlling two-thirds of worldwide infrastructure revenue. However, a vibrant, moderately fragmented secondary tier thrives around niche developer-centric VPS providers (DigitalOcean, Hetzner, OVHcloud) and sovereign/private open-source virtualization stacks (OpenStack, CloudStack, Proxmox VE, K3s) serving teams driven by data sovereignty, egress fee avoidance, and VMware cost migration.
 
 ---
 
-## Enterprise Cloud & Hosting SaaS Platforms
+## 🏢 Enterprise Cloud & Hosting SaaS Platforms
 
 The table below lists leading commercial enterprise cloud and VPS hosting providers, ranked descending by **Market Valuation / Enterprise Scale**.
 
@@ -45,7 +55,7 @@ The table below lists leading commercial enterprise cloud and VPS hosting provid
 
 ---
 
-## Open-Source Cloud Infrastructure & Hosting Projects
+## 🛠️ Open-Source Cloud Infrastructure & Hosting Projects
 
 Curated self-hosted cloud platforms, virtualization management engines, lightweight IaaS stacks, and container PaaS tools. Sorted in descending order by **GitHub Stars**.
 
@@ -70,7 +80,7 @@ Curated self-hosted cloud platforms, virtualization management engines, lightwei
 
 ---
 
-## Architecture & Platform Selection Guide
+## 🏗️ Architecture & Platform Selection Guide
 
 ```
 +--------------------------------------------------------------------------------------------------+
@@ -98,18 +108,38 @@ Oracle Cloud        OVHcloud ($3.50/mo)                            CloudStack,  
 
 ---
 
-## How to Contribute
+## Star History
 
-Contributions, project suggestions, and pricing updates are welcome!
-
-1. Fork this repository.
-2. Create a new branch: `git checkout -b feature/add-new-platform`.
-3. Add your tool with official website link, accurate pricing / GitHub star badge, and clear description.
-4. Open a Pull Request with a short summary of the addition.
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting&type=date&legend=top-left)
 
 ---
 
-## Disclaimer
+## 💖 Support
+
+Thank you for exploring this curated guide to enterprise cloud platforms and hosting solutions! 🌟
+
+If you find this repository valuable:
+- ⭐ **Star this repository** to help others discover it!
+- 🍴 **Fork it** and contribute your favorite platforms, benchmarking data, or corrections.
+- 📢 **Share it** with fellow platform engineers, DevOps teams, and cloud architects on social media or forums.
+- ☕ **Buy me a coffee / Sponsor**: If you'd like to support ongoing maintenance and new curated resources, you can sponsor the project via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+Every bit of support is deeply appreciated! 🙌
+
+---
+
+## 🤝 How to Contribute
+
+Contributions, project suggestions, and pricing updates are welcome!
+
+1. 🍴 Fork this repository.
+2. 🌿 Create a new branch: `git checkout -b feature/add-new-platform`.
+3. 📝 Add your tool with official website link, accurate pricing / GitHub star badge, and clear description.
+4. 🚀 Open a Pull Request with a short summary of the addition.
+
+---
+
+## ⚠️ Disclaimer
 
 - This list is community-curated for informational and architectural comparison purposes.
 - Cloud pricing, free tier terms, and trial allowances are subject to change by respective vendors. Verify current pricing and service level agreements (SLAs) directly on vendor portals before deployment.
