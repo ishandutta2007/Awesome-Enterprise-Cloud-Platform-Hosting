@@ -1,74 +1,122 @@
-# Awesome-Enterprise-Cloud-Platform-Hosting
+# Awesome Enterprise Cloud Platform & Hosting [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-## Top Enterprise Cloud Platform & Hosting Ecosystem
+> A curated list of top enterprise cloud platforms, IaaS providers, VPS hosting solutions, self-hosted private cloud infrastructure, and open-source cloud orchestration tools.
 
-**Curated List of SaaS Platforms & Open-Source GitHub Projects**  
-*Focused on Hyperscale IaaS, Budget VPS & Self-Hosted Cloud Platforms*  
-**Last updated: March 2026**
+[![GitHub stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting?style=social)](https://github.com/ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting/stargazers)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Enterprise-Cloud-Platform-Hosting/pulls)
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Enterprise Cloud Platform & Hosting**. These tools provide the foundational compute, storage, and networking infrastructure for running applications—covering everything from hyperscale public clouds to budget-friendly VPS providers and open-source platforms you can deploy on your own hardware.
-
-**Examples** include AWS, Microsoft Azure, Google Cloud Platform, Oracle Cloud Infrastructure, DigitalOcean, Hetzner, OVHcloud, Alibaba Cloud, OpenStack, and Proxmox VE (the category leaders).
-
-**Open-source emphasis**: This section highlights every major active project for self-hosted cloud infrastructure, open-source IaaS platforms, and community-driven virtualization management—ideal for organizations seeking data sovereignty and avoiding vendor lock-in. The open-source landscape splits into **full IaaS platforms** (OpenStack, CloudStack) for building public-cloud-like environments, and **virtualization managers** (Proxmox VE) for private infrastructure without the complexity of a full cloud control plane [citation:7][citation:13].
-
-Contributions welcome! Open an PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-| Product | Description | Pricing (Starting) | Free Tier / Trial Limits |
-|---------|-------------|-------------------|--------------------------|
-| **[AWS](https://aws.amazon.com/)** | The largest public cloud provider with the broadest service catalog and deepest compliance certifications. Holds ~31% of the global cloud infrastructure market. **Highest maximum committed-use discount (69%)** but also the highest on-demand compute pricing among the big three. Egress costs are the most expensive [citation:1][citation:8]. | On-demand Linux VPS from ~$3.50–$5/month (Lightsail); EC2 from ~$0.0104/hr | **12-month free tier**: 750 hours t2.micro/t3.micro, 5 GB S3; new accounts get up to **$200 credits** (6-month validity) |
-| **[Microsoft Azure](https://azure.microsoft.com/)** | Enterprise cloud with the **widest regional footprint (60+ regions)** and tightest Microsoft-stack integration. Hybrid Benefit licensing can dramatically cut costs for Windows/SQL Server workloads. Market share ~23–25% [citation:1][citation:8]. | On-demand Linux VMs from ~$0.0116/hr (B1s) | **12-month free tier**: 750 hours B1s VM, 5 GB Blob Storage; **$200 credit** for 30 days; 55+ always-free services |
-| **[Google Cloud Platform](https://cloud.google.com/)** | **Lowest on-demand compute pricing among the big three** (5–10% cheaper than AWS/Azure) with automatic sustained-use discounts (no commitment required). Strongest native AI/ML tooling with TPU access. **Cheapest egress rates** [citation:1][citation:8]. | Compute Engine from ~$0.0104/hr (e2-micro); Cloud Storage from $0.020/GB/month | **$300 credit for 90 days**; always-free: 1 e2-micro VM (US regions), 5 GB Cloud Storage, 1 GB BigQuery queries/month |
-| **[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/)** | Enterprise cloud with the **most generous Always Free tier**. **4 Arm Ampere A1 cores + 24 GB RAM free forever**, plus 2 AMD VMs. Autonomous Database Always Free includes 20 GB storage (no backups/restore) [citation:3][citation:10]. | Pay-as-you-go beyond Always Free limits | **Always Free**: 2 AMD VMs (1/8 OCPU, 1 GB RAM each), **4 Arm A1 cores + 24 GB RAM**, 200 GB Block Volume, 20 GB Object Storage, 2 Autonomous Databases (20 GB each) [citation:3][citation:10] |
-| **[DigitalOcean](https://www.digitalocean.com/)** | Developer-friendly cloud with the **most polished API and CLI (doctl)**. Simple pricing and strong documentation. Small VPS from **$6/month** (1 vCPU/1 GB); Medium from $24/month [citation:2][citation:9]. | Droplets from **$6/month** (1 GB RAM); Spaces from $5/month (250 GB) | **$200 credit for 60 days**; no permanent free tier for Droplets |
-| **[Hetzner](https://www.hetzner.com/)** | **Cheapest price-per-core in the market** after its August 2026 price increase. Small VPS at **$3.79/month**, Medium (4 vCPU/8 GB) at **$7.49/month**—roughly a third of DigitalOcean's cost for comparable specs [citation:2][citation:9]. EU-first with strong GDPR posture. Only 4 region clusters; no managed database ecosystem [citation:2]. | CX22: ~**$3.79/month** (1 vCPU/2 GB); CX32: ~$7.49/month | No permanent free tier; trial via sales |
-| **[OVHcloud](https://www.ovhcloud.com/)** | European cloud with strong data sovereignty positioning. **October 2026 pricing change**: local storage and public IPv4 are now **billed separately**—existing bills increase **1.4%–21.9%** depending on instance size. Compute hourly prices unchanged [citation:5][citation:12]. | VPS from ~$3.50/month; Public Cloud instances from ~$0.0087/hr | No permanent free tier; trial credits occasionally available via promotions |
-| **[Alibaba Cloud](https://www.alibabacloud.com/)** | China's largest cloud with global regions and competitive Asia-Pacific pricing. **New individual users get a 300 CNY ECS trial credit valid for 3 months**—low-spec instances (2 vCPU/2 GB) can run the full 90 days. **Product new user** requirement (not just account new) [citation:4]. | ECS from ~$0.012/hr (t5-lc1m1.small); OSS from $0.018/GB/month | **300 CNY credit for 3 months** (individual new users); free tier varies by region [citation:4] |
-| **[Zoho Cloud](https://www.zoho.com/)** | Application platform (not IaaS) providing customer engagement, ITSM, and CRM software. Underlying infrastructure managed by Zoho. | Freshdesk from $19/agent/month; Freshservice from $23/agent/month | Freshdesk free for 1–2 agents (6 months); Freshsales free for 3 users |
-
-## Open-Source GitHub Projects
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[OpenStack](https://github.com/openstack/openstack)** | [![Stars](https://img.shields.io/github/stars/openstack/openstack?style=social&color=white)](https://github.com/openstack/openstack/stargazers) | **The oldest and most battle-tested open-source IaaS platform.** Covers compute (Nova), object storage (Swift), networking (Neutron), block storage (Cinder), and identity (Keystone). Runs in production at telecoms, national research networks, and large enterprises. **Operational complexity is real**—requires a dedicated team and substantial expertise. Has its own API surface; AWS CLI/Terraform workflows do not carry over [citation:7]. **Best for large organizations with dedicated infrastructure teams** needing maximum flexibility and no AWS tooling dependency. |
-| **[Apache CloudStack](https://github.com/apache/cloudstack)** | [![Stars](https://img.shields.io/github/stars/apache/cloudstack?style=social&color=white)](https://github.com/apache/cloudstack/stargazers) | **Mature IaaS platform, simpler to deploy and operate than OpenStack.** Used by several commercial cloud providers. Has its own API with partial AWS EC2 compatibility (basic instance management only). Community smaller than OpenStack's; development pace has slowed but platform is stable [citation:7]. **Best for mid-size organizations building an internal cloud** who want something more operationally accessible than OpenStack. |
-| **[OpenNebula](https://github.com/OpenNebula/one)** | [![Stars](https://img.shields.io/github/stars/OpenNebula/one?style=social&color=white)](https://github.com/OpenNebula/one/stargazers) | **Lightweight IaaS for private, public, and hybrid clouds.** Apache-2.0. Manages KVM, LXC, and Firecracker workloads on a lean footprint—viable on smaller hardware clusters where OpenStack would be overkill. Simpler web interface than OpenStack's Horizon. Strong in HPC, research, and edge deployments [citation:7][citation:13]. **Best for research institutions, HPC environments, and edge deployments** needing a lightweight IaaS layer. |
-| **[Proxmox VE](https://github.com/proxmox)** | [![Stars](https://img.shields.io/github/stars/proxmox?style=social&color=white)](https://github.com/proxmox/stargazers) | **Virtualization management platform (KVM + LXC), not a full IaaS cloud.** Web interface for managing VMs and containers across a cluster, with Ceph integration for shared storage. **Most common destination for VMware refugees** after Broadcom's 800–1,500% price increases. No programmatic infrastructure provisioning API like AWS/OpenStack [citation:7][citation:13]. **Best for teams replacing VMware** who manage VMs through a web interface rather than programmatically. |
-| **[Ubicloud](https://github.com/ubicloud/ubicloud)** | [![Stars](https://img.shields.io/github/stars/ubicloud/ubicloud?style=social&color=white)](https://github.com/ubicloud/ubicloud/stargazers) | **Open-source managed cloud service running on Hetzner and Leaseweb hardware.** AGPL-3.0, Ruby, **12,300 GitHub stars**. Offers elastic compute, block storage, managed Postgres, Kubernetes, firewall, load balancer, and AI inference endpoints. **Pricing runs 3–10x lower than equivalent AWS services** [citation:7]. **Best for teams looking to cut cloud bills without changing their operational model significantly**—note this is a hosted service, not software you deploy on hardware you own. |
-
-### Additional Strong Open-Source Options
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[Cozystack](https://github.com/aenix-io/cozystack)** | — | **Free PaaS and private cloud platform.** TCO comparison shows **5-year cost of $342,915 for 200 VMs**—saving 36% vs Proxmox VE ($533,514) and 27% vs self-managed OpenStack ($467,569) [citation:6]. **Best for organizations wanting a lower-TCO alternative** to traditional private cloud platforms. |
-| **[Coolify](https://github.com/coollabsio/coolify)** | [![Stars](https://img.shields.io/github/stars/coollabsio/coolify?style=social&color=white)](https://github.com/coollabsio/coolify/stargazers) | **Self-hosted Heroku/Vercel/Netlify alternative.** Apache-2.0, **61,430 GitHub stars**. Deploy static sites, Node.js, PHP, and databases on your own VPS with Git integration and automatic SSL. ToolVitals score 98 (Excellent) [citation:14]. **Best for developers wanting PaaS-like deployment** on their own infrastructure. |
-
-**Frameworks for building custom systems**: Choose **OpenStack** for full IaaS with broad service coverage if you have a dedicated team [citation:7], **Proxmox VE** for VMware replacement with straightforward VM management [citation:13], or **Ubicloud** for a hosted cloud service at 3–10x lower cost than AWS [citation:7]. **For budget VPS hosting**, **Hetzner** delivers the lowest price-per-core ($3.79/month for small, $7.49 for 4 vCPU/8 GB) [citation:2][citation:9], while **Oracle Cloud's Always Free tier** (4 Arm cores + 24 GB RAM forever) is unmatched for small workloads [citation:3].
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Cloud platforms handle sensitive workloads and data; enforce least-privilege IAM policies, network segmentation, and encryption at rest and in transit.
-- **Pricing models vary dramatically and hidden costs compound.** **Egress fees** are the most overlooked cost—GCP recently reduced them and is the cheapest of the big three, while AWS remains the most expensive [citation:1]. **Hetzner's low headline prices** exclude the operational trade-off of only 4 region clusters and no managed database ecosystem [citation:2]. **OVHcloud unbundled local storage and IPv4 in October 2026**, increasing existing bills by 1.4%–21.9% [citation:5][citation:12]. **Oracle's Always Free Autonomous Database has no backups or restore**—upgrade to paid for production use [citation:10]. **Alibaba's 300 CNY trial is for product new users only** (not just account new)—if you've ever opened an ECS instance, you're ineligible [citation:4]. Validate total cost of ownership including egress, support, and operational overhead before committing.
+This repository tracks industry-leading **SaaS & Hyperscale Cloud Platforms** alongside battle-tested **Open-Source GitHub Projects** for enterprise compute, virtualization, container orchestration, and cloud infrastructure hosting. Whether you need hyperscale public clouds, cost-effective developer VPS hosting, or full control with private on-premises IaaS, this guide provides comparative pricing, market valuation, and GitHub popularity metrics.
 
 ---
 
-**Made for platform engineers, cloud architects, and organizations building infrastructure.**  
-Let's make enterprise cloud platform and hosting more open, transparent, and cost-predictable.
+## Table of Contents
+
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [Enterprise Cloud & Hosting SaaS Platforms](#enterprise-cloud--hosting-saas-platforms)
+- [Open-Source Cloud Infrastructure & Hosting Projects](#open-source-cloud-infrastructure--hosting-projects)
+- [Architecture & Platform Selection Guide](#architecture--platform-selection-guide)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer](#disclaimer)
+
+---
+
+## Sector Overview & Market Dynamics
+
+The global enterprise cloud computing and IaaS market is valued at approximately **$670+ billion in 2026** and projected to exceed **$1.2 trillion by 2030** (CAGR ~18–20%). The sector is **highly concentrated (oligopolistic / winner-take-most)** at the hyperscale foundation tier, with the "Big Three"—Amazon Web Services (~31%), Microsoft Azure (~24%), and Google Cloud Platform (~11%)—controlling two-thirds of worldwide infrastructure revenue. However, a vibrant, moderately fragmented secondary tier thrives around niche developer-centric VPS providers (DigitalOcean, Hetzner, OVHcloud) and sovereign/private open-source virtualization stacks (OpenStack, CloudStack, Proxmox VE, K3s) serving teams driven by data sovereignty, egress fee avoidance, and VMware cost migration.
+
+---
+
+## Enterprise Cloud & Hosting SaaS Platforms
+
+The table below lists leading commercial enterprise cloud and VPS hosting providers, ranked descending by **Market Valuation / Enterprise Scale**.
+
+| Product | Enterprise Scale / Valuation | Description | Starting Pricing | Free Tier / Trial Limits |
+|---------|-----------------------------|-------------|------------------|--------------------------|
+| **[Microsoft Azure](https://azure.microsoft.com/)** | **~$3.1 Trillion** (Market Cap) | Enterprise hyperscale cloud featuring 60+ global datacenter regions, industry-leading hybrid-cloud solutions (Azure Arc), and seamless Microsoft enterprise stack integration. | B1s Linux VM from **$0.0116/hr** (~$8.47/month); App Service free tier available | **12-Month Free Tier**: 750 hrs B1s burstable VM, 5 GB Blob Storage; **$200 credit** for 30 days; 55+ services always free |
+| **[AWS](https://aws.amazon.com/)** | **~$2.0 Trillion** (Amazon Market Cap) | The world's largest public cloud provider with over 200 fully-featured services, unmatched partner ecosystem, and deepest compliance certifications. | Lightsail Linux VPS from **$3.50/month** (512 MB RAM, 1 vCPU, 20 GB SSD); EC2 t4g.nano from **$0.0042/hr** | **12-Month Free Tier**: 750 hrs t2.micro/t3.micro per month, 5 GB S3 Standard Storage; **$200 credits** for eligible new signups |
+| **[Google Cloud Platform](https://cloud.google.com/)** | **~$2.0 Trillion** (Alphabet Market Cap) | Cloud hyperscaler renowned for data analytics, Kubernetes engineering, premier AI/TPU infrastructure, and competitive sustained-use egress pricing. | Compute Engine e2-micro from **$0.0104/hr** (~$7.60/month); Cloud Storage from **$0.020/GB/month** | **Always Free Tier**: 1 non-preemptible e2-micro VM per month (US regions), 5 GB Cloud Storage, 1 GB BigQuery queries; **$300 credit** for 90 days |
+| **[Oracle Cloud Infrastructure](https://www.oracle.com/cloud/)** | **~$420 Billion** (Market Cap) | Enterprise IaaS engineered for mission-critical enterprise workloads, high-performance bare metal compute, and Autonomous Database instances. | Compute Ampere A1 from **$0.01/OCPU/hr**; E4 standard compute from **$0.025/OCPU/hr** | **Always Free Tier**: 4 Arm Ampere A1 cores + 24 GB RAM, 2 AMD VMs (1/8 OCPU, 1 GB RAM each), 200 GB Block Storage, 2 Autonomous DBs (20 GB each); **$300 credit** for 30 days |
+| **[Alibaba Cloud](https://www.alibabacloud.com/)** | **~$240 Billion** (Alibaba Group Market Cap) | Dominant cloud provider in China and Asia-Pacific, offering robust hybrid cloud, elastic compute (ECS), and cross-border enterprise solutions. | ECS t5-lc1m1.small from **$0.012/hr** (~$4.50/month); Object Storage Service (OSS) from **$0.018/GB/month** | **3-Month Free Trial**: 300 CNY (~$42) credit valid for 90 days (covers 2 vCPU / 2 GB RAM ECS); 50+ free-tier products for new users |
+| **[DigitalOcean](https://www.digitalocean.com/)** | **~$3.6 Billion** (Market Cap) | Simple, developer-first cloud platform offering virtual private servers (Droplets), managed Kubernetes (DOKS), managed DBs, and predictable flat-rate egress. | Basic Droplet from **$4.00/month** (512 MB RAM, 1 vCPU, 10 GB SSD) or **$6.00/month** (1 GB RAM, 1 vCPU, 25 GB SSD) | **Free Trial**: **$200 credit** valid for 60 days for all new accounts; 3 static sites free on App Platform (no permanent free VPS) |
+| **[OVHcloud](https://www.ovhcloud.com/)** | **~$1.8 Billion** (Market Cap) | Leading European sovereign cloud and dedicated server host offering transparent pricing, anti-DDoS mitigation, and GDPR-compliant European hosting. | Starter VPS from **$3.50/month** (1 vCPU, 2 GB RAM, 20 GB SSD); Public Cloud instances from **$0.0087/hr** | **Free Trial**: €200 cloud credit voucher for 30-day trials for verified enterprise accounts; no permanent free compute tier |
+| **[Zoho Cloud](https://www.zoho.com/)** | **~$1.0 Billion** (Annual ARR / Private) | Bootstrapped enterprise SaaS ecosystem running on proprietary, vertically integrated datacenters emphasizing zero third-party trackers and strict privacy. | Zoho CRM starting at **$14/user/month**; Zoho Desk from **$14/agent/month**; Zoho One suite from **$37/employee/month** | **Always Free Tier**: Zoho CRM free up to 3 users; Zoho Desk free for 3 agents; Zoho Mail free up to 5 users (5 GB/user); 15-day unrestricted enterprise trials |
+| **[Hetzner](https://www.hetzner.com/)** | **~$650 Million** (Annual Revenue / Private) | High-performance German cloud and dedicated hosting provider offering the industry's lowest price-to-performance compute with unmetered 20 TB traffic. | CX22 Cloud VPS from **€3.49/month** (~$3.79/month for 1 vCPU, 2 GB RAM, 40 GB NVMe, 20 TB traffic) | **Free Trial**: €20 trial credits upon account verification via support request; no permanent free compute instances |
+
+---
+
+## Open-Source Cloud Infrastructure & Hosting Projects
+
+Curated self-hosted cloud platforms, virtualization management engines, lightweight IaaS stacks, and container PaaS tools. Sorted in descending order by **GitHub Stars**.
+
+| Project | Stars | Category | Description |
+|---------|:-----:|----------|-------------|
+| **[Kubernetes](https://github.com/kubernetes/kubernetes)** | [![Stars](https://img.shields.io/github/stars/kubernetes/kubernetes?style=social&color=white)](https://github.com/kubernetes/kubernetes/stargazers) | Container Orchestration | Production-grade container scheduling and workload management system. The de facto standard runtime foundation for modern cloud-native infrastructure across public, hybrid, and private clouds. |
+| **[Coolify](https://github.com/coollabsio/coolify)** | [![Stars](https://img.shields.io/github/stars/coollabsio/coolify?style=social&color=white)](https://github.com/coollabsio/coolify/stargazers) | Self-Hosted PaaS | An open-source, self-hosted alternative to Heroku, Vercel, and Netlify. Effortlessly deploys web apps, databases, and Docker workloads onto any Linux VPS with automatic SSL, Git push triggers, and zero lock-in. |
+| **[Firecracker](https://github.com/firecracker-microvm/firecracker)** | [![Stars](https://img.shields.io/github/stars/firecracker-microvm/firecracker?style=social&color=white)](https://github.com/firecracker-microvm/firecracker/stargazers) | MicroVM Hypervisor | Secure and ultra-fast microVM hypervisor written in Rust by AWS. Boots lightweight virtual machines in under 5 milliseconds with minimal memory overhead, powering AWS Lambda and Fargate at hyper-scale. |
+| **[K3s](https://github.com/k3s-io/k3s)** | [![Stars](https://img.shields.io/github/stars/k3s-io/k3s?style=social&color=white)](https://github.com/k3s-io/k3s/stargazers) | Lightweight Kubernetes | Highly available, certified Kubernetes distribution packaged as a single binary under 100 MB. Optimized for edge computing, IoT, ARM devices, and budget private cloud VPS hosting. |
+| **[Dokku](https://github.com/dokku/dokku)** | [![Stars](https://img.shields.io/github/stars/dokku/dokku?style=social&color=white)](https://github.com/dokku/dokku/stargazers) | Mini-Heroku PaaS | Docker-powered mini-Heroku PaaS and the smallest self-hosted platform imaginable. Push-to-deploy git repositories directly to your bare-metal server or cheap VPS with built-in Let's Encrypt SSL and plugin architecture. |
+| **[Rancher](https://github.com/rancher/rancher)** | [![Stars](https://img.shields.io/github/stars/rancher/rancher?style=social&color=white)](https://github.com/rancher/rancher/stargazers) | Multi-Cluster Management | Complete enterprise management platform for Kubernetes. Operates multi-cluster deployments across multi-cloud environments, bare-metal servers, and branch-office edge nodes with centralized RBAC and security. |
+| **[OpenFaaS](https://github.com/openfaas/faas)** | [![Stars](https://img.shields.io/github/stars/openfaas/faas?style=social&color=white)](https://github.com/openfaas/faas/stargazers) | Serverless Platform | Cloud-agnostic Serverless Functions framework for Kubernetes and Docker. Run microservices and event-driven functions on your own on-prem hardware or private cloud without AWS Lambda vendor lock-in. |
+| **[CapRover](https://github.com/caprover/caprover)** | [![Stars](https://img.shields.io/github/stars/caprover/caprover?style=social&color=white)](https://github.com/caprover/caprover/stargazers) | Web App & Database PaaS | Automated App/Database deployment dashboard and PaaS over Docker Swarm. Provides 1-click installations for over 100 applications (WordPress, Nextcloud, MongoDB, Postgres) with automatic Nginx configuration. |
+| **[Ubicloud](https://github.com/ubicloud/ubicloud)** | [![Stars](https://img.shields.io/github/stars/ubicloud/ubicloud?style=social&color=white)](https://github.com/ubicloud/ubicloud/stargazers) | Open IaaS Cloud | Open-source alternative to AWS running on commodity bare-metal providers like Hetzner and Leaseweb. Delivers elastic compute, block storage, load balancers, and managed Postgres at 3–10x lower cost than AWS. |
+| **[Cloud Hypervisor](https://github.com/cloud-hypervisor/cloud-hypervisor)** | [![Stars](https://img.shields.io/github/stars/cloud-hypervisor/cloud-hypervisor?style=social&color=white)](https://github.com/cloud-hypervisor/cloud-hypervisor/stargazers) | Rust VMM | Open-source Virtual Machine Monitor (VMM) running on top of KVM and MSHV, implemented in Rust with a primary design focus on high-density cloud-native virtualization workloads. |
+| **[OpenStack](https://github.com/openstack/openstack)** | [![Stars](https://img.shields.io/github/stars/openstack/openstack?style=social&color=white)](https://github.com/openstack/openstack/stargazers) | Hyperscale Private IaaS | The industry standard open-source enterprise cloud computing platform. Orchestrates massive pools of compute (Nova), storage (Cinder/Swift), and networking (Neutron) throughout telecommunication and enterprise datacenters. |
+| **[Harvester](https://github.com/harvester/harvester)** | [![Stars](https://img.shields.io/github/stars/harvester/harvester?style=social&color=white)](https://github.com/harvester/harvester/stargazers) | Hyperconverged HCI | Open-source hyperconverged infrastructure (HCI) built on Kubernetes, KubeVirt, and Longhorn. Modern open-source alternative to VMware vSphere and Nutanix for enterprise datacenter consolidation. |
+| **[Apache CloudStack](https://github.com/apache/cloudstack)** | [![Stars](https://img.shields.io/github/stars/apache/cloudstack?style=social&color=white)](https://github.com/apache/cloudstack/stargazers) | Turnkey IaaS Platform | Mature, turnkey open-source infrastructure-as-a-service cloud orchestrator. Designed for enterprise private clouds and telecom service providers seeking simpler operational maintenance than OpenStack. |
+| **[Cozystack](https://github.com/aenix-io/cozystack)** | [![Stars](https://img.shields.io/github/stars/aenix-io/cozystack?style=social&color=white)](https://github.com/aenix-io/cozystack/stargazers) | Turnkey PaaS / Cloud Engine | Free open-source PaaS and private cloud orchestrator based on Talos Linux and Kubernetes. Delivers a complete turnkey cloud ecosystem with automated storage, networking, and VM support at significant TCO savings. |
+| **[OpenNebula](https://github.com/OpenNebula/one)** | [![Stars](https://img.shields.io/github/stars/OpenNebula/one?style=social&color=white)](https://github.com/OpenNebula/one/stargazers) | Enterprise Hybrid IaaS | Simple, minimalist enterprise cloud and edge computing management software. Orchestrates heterogeneous virtual machines (KVM), microVMs (Firecracker), and system containers on low-overhead footprints. |
+| **[Proxmox VE](https://github.com/proxmox/pve-manager)** | [![Stars](https://img.shields.io/github/stars/proxmox/pve-manager?style=social&color=white)](https://github.com/proxmox/pve-manager/stargazers) | Virtualization Platform | Complete open-source server management platform for enterprise virtualization (KVM hypervisor, LXC containers, software-defined Ceph storage, and clustering). Premier migration target for VMware vSphere. |
+
+---
+
+## Architecture & Platform Selection Guide
+
+```
++--------------------------------------------------------------------------------------------------+
+|                                    WORKLOAD REQUIREMENTS                                         |
++--------------------------------------------------------------------------------------------------+
+             |                                                                     |
+             v                                                                     v
+     [ Public Cloud SaaS ]                                                [ Self-Hosted / On-Prem ]
+             |                                                                     |
+    +--------+--------+                                                   +--------+--------+
+    |                 |                                                   |                 |
+    v                 v                                                   v                 v
+[ Hyperscale IaaS ] [ Budget VPS / Sovereign ]                     [ Full IaaS Engine ] [ Virtualization / PaaS ]
+AWS, Azure, GCP,    Hetzner (€3.49/mo)                             OpenStack,           Proxmox VE (VMware alt)
+Oracle Cloud        OVHcloud ($3.50/mo)                            CloudStack,          Coolify / Dokku (App PaaS)
+                    DigitalOcean ($4.00/mo)                        Ubicloud             K3s / Harvester (Kubernetes)
+```
+
+1. **For Hyperscale Public Workloads**: Choose **AWS**, **Microsoft Azure**, or **Google Cloud Platform** when you require global multi-region presence, complex compliance certifications, managed AI accelerators (TPUs/GPUs), and managed databases.
+2. **For High-Performance Developer VPS & Low Egress**: Choose **Hetzner** for unbeatable European compute costs (€3.49/mo), or **DigitalOcean** for simple UX and predictable budgeting.
+3. **For Free-Tier Lab Workloads**: Choose **Oracle Cloud Infrastructure**'s Always Free Tier (4 Arm Ampere cores + 24 GB RAM) for zero-cost experimental clusters.
+4. **For VMware vSphere Replacement**: Choose **Proxmox VE** or **Harvester** to operate enterprise VM clusters and containerized storage without licensing extortion.
+5. **For Private Cloud & Telecom IaaS**: Choose **OpenStack** for complex multi-tenant datacenters, or **Apache CloudStack** / **OpenNebula** for rapid operational setup.
+6. **For Self-Hosted Heroku Alternatives**: Choose **Coolify** or **Dokku** to streamline web application deployments and databases on any bare-metal or cloud VPS instance.
+
+---
+
+## How to Contribute
+
+Contributions, project suggestions, and pricing updates are welcome!
+
+1. Fork this repository.
+2. Create a new branch: `git checkout -b feature/add-new-platform`.
+3. Add your tool with official website link, accurate pricing / GitHub star badge, and clear description.
+4. Open a Pull Request with a short summary of the addition.
+
+---
+
+## Disclaimer
+
+- This list is community-curated for informational and architectural comparison purposes.
+- Cloud pricing, free tier terms, and trial allowances are subject to change by respective vendors. Verify current pricing and service level agreements (SLAs) directly on vendor portals before deployment.
+- All trademarks and brand names belong to their respective owners.
+
+---
+
+<div align="center">
+  <sub>Maintained with ❤️ for cloud architects, platform engineers, and sysadmins worldwide.</sub>
+</div>
